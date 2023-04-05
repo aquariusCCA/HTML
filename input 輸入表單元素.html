@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="xxx.php" method="get">
+		<!-- type 属性设置为 text 是文本框 -->
+    <!-- 定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。 -->
+    <!-- maxlength: 规定输入字段中字符的最大长度 -->
+    用户名: <input type="text" name="username" value="请输入用户名" placeholder="文本框占位符" maxlength="6"> <br>
+
+
+
+    <!-- type 属性设置为 password 是密码框，用户看不见输入的密码 -->
+    <!-- 定义密码字段。该字段中的字符被掩码 -->
+    密码: <input type="password" name="pwd" placeholder="文本框占位符"> <br>
+
+
+
+    <!-- type 属性设置为 radio 是单选框，可以实现多选一 -->
+    <!-- name 是表单元素的名字，要求 单选框和复选框要有相同的 name 值 -->
+    <!-- checked 属性主要针对于单选框和复选框，主要作用是一打开页面，就可以默认选中某个表单元素 -->
+    性别: 
+        男 <input type="radio" name="sex" value="男"> 
+        女 <input type="radio" name="sex" value="女" checked="checked"> 
+        人妖 <input type="radio" name="sex" value="人妖"> <br>
+
+
+
+    <!-- type 属性设置为 checkbox 是复选框，可以实现多选 -->
+    <!-- name 是表单元素的名字，要求单选框和复选框要有相同的 name 值 -->
+    <!-- checked 属性主要针对于单选框和复选框，主要作用是一打开页面，就可以默认选中某个表单元素 -->
+    爱好: 
+        吃饭 <input type="checkbox" name="hobby" value="吃饭"> 
+        睡觉 <input type="checkbox" name="hobby"> 
+        打豆豆 <input type="checkbox" name="hobby" checked="checked">
+        <br>
+
+
+
+    <!-- 点击了提交按钮,可以把 表单域 form 里面的表单元素 里面的值 提交给后台服务器 -->
+    <!-- type 属性设置为submit：提交按钮会把表单数据发送到服务器 -->
+		<!-- 属性 value 修改按钮显示的值 -->
+    <input type="submit" value="免费注册">
+
+
+
+    <!-- 重置按钮可以还原表单元素初始的默认状态 -->
+    <!-- type 属性设置为reset：重置按钮会清除表单中的所有数据 -->
+		<!-- 属性 value 修改按钮显示的值 -->
+    <input type="reset" value="重新填写">
+
+
+
+    <!-- 普通按钮 button  后期结合js 搭配使用-->
+    <!-- type 属性设置为button：是一个按钮 -->
+		<!-- 属性 value 修改按钮显示的值 -->
+    <input type="button" value="获取短信验证码"> <br>
+
+
+
+		<!-- 文件域 使用场景 上传文件使用的 -->
+    <!-- type 属性设置为file：是一个文件域，可以上传文件 -->
+    <!-- multiple 多选 -->
+    上传头像: <input type="file"><br>
+    上傳多張生活照: <input type="file" multiple />
+</form>
+</body>
+</html>
