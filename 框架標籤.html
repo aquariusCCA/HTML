@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 利用 iframe 嵌入一個普通的網頁 -->
+  <iframe src="https://www.bilibili.com/" width="900" height="300" frameborder="0"></iframe>
+  <hr>
+
+  <!-- 利用 iframe 嵌入其他內容 -->
+  <iframe src="./media/test.pdf" frameborder="1"></iframe>
+  <hr>
+
+  <!-- 與超鏈接的 target 屬性配合使用 -->
+  <a href="https://www.bilibili.com/" target="container">點我去 B站</a>
+  <iframe name="container" frameborder="0" width="900" height="300"></iframe>
+  <hr>
+  
+  <!-- 與表單的 target 屬性配合使用 -->
+  <form action="https://so.toutiao.com/search" target="container2">
+    <input type="text" name="keyword">
+    <input type="submit" value="搜索">
+  </form>
+  <iframe name="container2" frameborder="0" width="900" height="300"></iframe>
+</body>
+</html>

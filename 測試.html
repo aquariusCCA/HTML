@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  <h1>測試頁面</h1>
+  <div>
+    <a href="https://www.baidu.com" tabindex="3">百度</a>
+    <a href="https://www.taobao.com" tabindex="2">阿里</a>
+    <a href="https://www.qq.com" tabindex="1">腾讯</a>
+  </div>
+  <script>
+    function getIdentity() {
+      // 從 sessionStorage 獲取 userDetail (注意!!此時是字符串的形式)
+      const userDetailStr = sessionStorage.getItem('userDetail')
+      if (!userDetailStr) {
+        console.error('userDetail is null or undefined')
+        return
+      }
+      const { userInfo } = JSON.parse(userDetailStr)
+      const identity = userInfo?.identity
+
+      console.log('identity: ', identity)
+
+      showXref.value = identity === '0'
+    }
+  </script>
 </body>
+
 </html>
